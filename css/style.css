@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+*{
+	margin:0;
+	padding: 0;
+}
+:root {
+  --mainPink: #ef7998;
+  --mainYellow: rgb(249, 228, 148);
+  --mainWhite: #fff;
+  --mainBlack: #000;
+  --yellowTrans: rgba(249, 228, 148, 0.5);
+  --mainGrey: rgb(238, 238, 238);
+}
+
+body {
+  font-family: "Kaushan Script", cursive;
+  background: var(--mainWhite);
+  color: var(--mainBlack);
+  margin: 0;
+  padding: 0;
+}
+
+/*global style*/
+
+.btn-pink{
+	color: var(--mainPink) !important;
+	border-color: var(--mainPink) !important;
+	background: var(--mainWhite) !important;
+	transition: 1s all;
+}
+.btn-Black{
+
+	color: var(--mainPink) !important;
+	border-color: var(--mainPink) !important;
+	transition: 1s all;
+}
+
+.btn-pink:hover{
+color: var(--mainWhite) !important;
+background: var(--mainPink) !important;
+
+}
+.btn-Black:hover{
+color: var(--mainWhite) !important;
+background: var(--mainPink) !important;
+
+}
+
+/*nav link*/
+
+.navbar-toggler{
+	outline: none !important;
+}
+
+.toggler-icon{
+	font-size: 2.5rem;
+
+	color: var(--mainPink);
+}
+
+.nav-link{
+	color: var(--mainPink);
+	transition: all 1s ease-in-out;
+	font-size: 1.5rem;
+}
+
+.nav-link:hover{
+	color: var(--mainBlack);
+}
+
+.cart-info__icon{
+	color: var(--mainBlack);
+	cursor: pointer;
+
+}
+
+.cart-info{
+	border: 0.1rem solid var(--mainPink);
+	color: var(--mainBlack);
+	border-radius: 0.25rem; 
+	padding: 0.4rem;
+	cursor: pointer;
+}
+
+.cart-info:hover{
+	background: var(--mainPink);
+	border: var(--mainPink);
+	color: var(--mainWhite);
+
+}
+
+.cart-info:hover .cart-info__icon{
+	color: var(--mainWhite);
+}
+
+.max-height {
+
+	min-width: calc(100vh - 76px);
+	background: linear-gradient(var(--yellowTrans),var(--yellowTrans)), url("../img/headerBcg.jpeg");
+	background-position: center; 
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	height: 100vh;
+	position: relative;
+}
+
+.text-main{
+	color: var(--mainWhite);
+	font-size: 4rem;
+}
+
+.banner {
+		color: var(--mainWhite);
+		margin-top: -4rem;
+}
+
+.banner-title{
+	color: var(--mainPink);
+	font-size: 4.5rem;
+}
+
+.banner-link{
+	background: var(--mainPink);
+	color: var(--mainWhite);
+	border: var(--mainPink);
+	transition: all 1s ease-in-out;
+	font-size: 1.5rem;
+}
+.banner-link:hover{
+	transform: scale(1.1);
+	color: var(--mainWhite);
+	
+}
+
+/*about*/
+
+.about-img__container{
+	position: relative;
+
+}
+
+.about-img__container::before{
+	content: '';
+	position: absolute;
+	top: -1.5rem;
+	left: -1.7rem;
+	width: 100%;
+	height: 100%;
+	outline: 0.5rem solid var(--mainYellow);
+	z-index: -1;
+	transition: all 1s ease-in-out;
+}
+
+.about-img__container:hover:before{
+	top:0;
+	left: 0;
+
+}
+
+/*Store*/
+.card-body{ box-shadow: 0 0 1em #0a0a0a;}
+.store{
+	background: var(--mainGrey);
+}
+
+.search-box{
+	background: var(--mainPink);
+	color: var(--mainBlack);
+}
+
+.img-container{
+position: relative;
+overflow: hidden;
+cursor: pointer;
+ box-shadow: 0 0 .5em #fff;
+
+}
+
+.store-img{
+	transition: all 1s ease-in-out;
+
+}
+
+.img-container:hover .store-img{
+transform: scale(1.2);
+}
+
+.store-img-icon{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 0.75rem;
+	background: var(--mainPink);
+	border-radius: 15px 0px 0px 0px;
+	transition: all 1s ease-in-out;
+	transform: translate(100%,100%);
+	color: var(--mainWhite);
+}
+
+.img-container:hover .store-img-icon{
+	transform: translate(0,0);
+}
+
+.store-img-icon:hover{
+	color: var(--mainBlack);
+}
+.services {
+	color: var(--mainWhite);
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../img/servicesBcg.jpeg");
+	background-position: center; 
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+}
+
+.services-title{
+	letter-spacing: 0.5rem;
+}
+
+
+.footer-left{
+	background: var(--mainPink);
+	height: 400px;
+
+
+}
+
+.footer-right{
+	background: var(--mainBlack);
+	height: 400px;
+
+}
+
+.contacto {
+	color: var(--mainWhite);
+}
+
+
+.cart {
+	position: absolute;
+	right: 0;
+	top: 0;
+	min-height: 10rem;
+	background: rgba(255,255,255,.5);
+	transform: translate3d(300px,0,0);
+	border-radius: 0px 0px 0px 15px;
+	width: 0;
+	transition: 1s all ease-in-out;
+	overflow: hidden;
+
+}
+.show-cart{
+	transform: translate(0,0);
+	width: 18rem;
+	padding: 1.5rem;
+	transform: translate3d(0,0,0);
+
+}
+
+.cart-item-remove{
+	color: var(--mainPink);
+}
+
+.cart-item-remove:hover{
+	color: var(--mainWhite);
+	transform: scale(1.2);
+}
