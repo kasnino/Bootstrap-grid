@@ -1,5 +1,5 @@
 
-
+const feedback = document.querySelector(".feedback");
 //show cart
 
 (function(){
@@ -13,6 +13,8 @@
 
 });
 })();
+
+
 
 
 // agregando items al cart
@@ -83,7 +85,8 @@ const total = document.querySelector('.cart-total-container');
 
 
 cartt.insertBefore(cartItem, total);
-alert('iten agregado al carro');
+showfeedback("agregado al carro Exitosamente","primary");
+
 showtotal();
 remover();
 
@@ -154,7 +157,13 @@ remover();
 				
 			}
 
-				
+	function showfeedback(text, action){
+	feedback.classList.add("showItem", `alert-${action}`);
+	feedback.innerHTML = `<p>${text}</p>`;
+	setTimeout(function(){
+		feedback.classList.remove("showItem", `alert-${action}`);
+	}, 2000);
+}			
 
 
 		})();
